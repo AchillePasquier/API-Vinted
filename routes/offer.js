@@ -7,12 +7,11 @@ const Offer = require("../models/offer");
 const isAuthenticated = require("../middlewares/isAuthenticated");
 
 const cloudinary = require("cloudinary").v2;
-
 // Données à remplacer avec vos credentials :
 cloudinary.config({
-  cloud_name: "dushpdlzq",
-  api_key: "883212726475974",
-  api_secret: "3bl3QNxrioMCWzgO8ufmJ7WDX48",
+  cloud_name: process.env.cloud_nameS,
+  api_key: process.env.api_keyS,
+  api_secret: process.env.api_secretS,
 });
 
 router.post("/offer/publish", isAuthenticated, async (req, res) => {
