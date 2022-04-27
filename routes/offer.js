@@ -3,6 +3,7 @@ const router = express.Router();
 
 const User = require("../models/user");
 const Offer = require("../models/offer");
+console.log("test");
 
 const isAuthenticated = require("../middlewares/isAuthenticated");
 
